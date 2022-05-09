@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  
+  --primary-color: hsl(236, 28%, 29%);
+  --secondary-color: hsl(231, 20%, 38%);
+  --third-color: hsl(226, 28%, 43%);
+
+  --brand-beige: hsl(28, 58%, 88%);
+  --brand-light: hsl(37, 87%, 63%);
+  --brand-dark: hsl(22, 86%, 62%);
+
+  --headline: hsl(210, 11%, 15%);
+  --paragraph: hsl(210, 9%, 31%);
+
+  font-size: 62.5%;
+}
+
+html {
+  /* chrome://flags/#smooth-scrolling */
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+
+  text-align: center;
+  letter-spacing: 0.08rem;
+
+  background: var(--primary-color);
+}
+
+/*================= BODY ==============*/
+
+header img {
+  padding-block: 3rem;
+}
+
+main h1 {
+  color: var(--brand-beige);
+  font-weight: bold;
+  padding-bottom: 1rem;
+
+  text-shadow: 2px 2px var(--headline);
+}
+
+main p {
+  color: var(--brand-beige);
+  padding-bottom: 5rem;
+  text-shadow: 1px 1px var(--headline);
+}
+
+div .content {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.content a {
+
+  
+  display: flex;
+  flex-direction: column;
+
+  width: 30rem;
+  height: 4rem;
+
+  align-items: center;
+  justify-content: center;
+
+  background: var(--brand-dark);
+  color: var(--primary-color);
+  border-radius: 1.2rem;
+  text-decoration: none;
+
+
+}
+
+.content a:hover {
+  font-weight: bold;
+  background: var(--brand-light);
+}
+
+.bg-topzera {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-block: auto;
+
+  height: 95.2%;
+
+  margin-inline: auto;
+  padding-block: 2.4rem;
+
+  background-image: url("S-Antônio-Pattern-001.png");
+  background-size: contain;
+  background-position: -30rem 2rem;
+
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+
+  height: 3rem;
+  background: var(--primary-color);
+
+  filter: brightness(0.9);
+}
+
+footer a {
+  color: var(--brand-beige);
+  text-decoration: none;
+}
