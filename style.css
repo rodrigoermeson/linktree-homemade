@@ -131,3 +131,7 @@ footer a {
   color: var(--brand-beige);
   text-decoration: none;
 }
+
+footer p {
+  color: var(--brand-beige);
+}
