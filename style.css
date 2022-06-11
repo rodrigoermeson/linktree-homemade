@@ -135,3 +135,164 @@ a.anime:hover::before {
   background-size: contain;
   background-position: -30rem 2rem;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: hsl(236, 28%, 29%);
+  --secondary-color: hsl(231, 20%, 38%);
+  --third-color: hsl(226, 28%, 43%);
+
+  --brand-beige: hsl(28, 58%, 88%);
+  --brand-light: hsl(37, 87%, 63%);
+  --brand-dark: hsl(22, 86%, 62%);
+
+  --headline: hsl(210, 11%, 15%);
+  --paragraph: hsl(210, 9%, 31%);
+
+  font-size: 62.5%;
+}
+
+html {
+  /* chrome://flags/#smooth-scrolling */
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+
+  text-align: center;
+  letter-spacing: 0.08rem;
+
+  background: var(--primary-color);
+}
+
+/*================= BODY ==============*/
+
+header img {
+  padding-block: 3rem;
+}
+
+main h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: white;
+  font-weight: bold;
+  padding-bottom: 1rem;
+
+  text-shadow: 2px 2px var(--headline);
+}
+
+main p {
+  color: white;
+  padding-bottom: 5rem;
+  text-shadow: 1px 1px var(--headline);
+}
+
+div .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.content a {
+  display: flex;
+  flex-direction: column;
+}
+
+a.anime {
+  height: 5rem;
+  width: 29rem;
+
+  letter-spacing: 1rem;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 1.2rem 3.2rem;
+  background: transparent;
+  color: white;
+  border: 0.2rem solid white;
+  border-radius: 1.2rem;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+a.anime:hover {
+  font-weight: bold;
+  color: black;
+  height: 5.5rem;
+  width: 29.5rem;
+  border: 0.2rem solid black;
+}
+
+a.anime::before {
+  content: '';
+  position: absolute;
+  height: 5.5rem;
+  width: 29.1rem;
+  z-index: -1;
+  border-radius: 1.5rem;
+  background-color: hsl(239, 51%, 53%);
+  transform: translate(0.5rem, 0.3rem);
+  transition: 0.4s;
+}
+
+a.anime:hover::before {
+  height: 5.6rem;
+  width: 29.6rem;
+  background-color: hsl(0, 86%, 57%);
+  transform: translate(-0.5rem, -0.5rem);
+}
+
+.bg-topzera {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-block: auto;
+
+  height: 100%;
+
+  margin-inline: auto;
+  padding-block: 2.4rem;
+
+  background-image: url(./S-Antônio-Pattern-001.png);
+  background-size: contain;
+  background-position: -30rem 2rem;
+}
+
+@media (min-width: 700px) {
+  a.anime {
+    height: 6rem;
+    width: 43rem;
+  }
+
+  a.anime:hover {
+    height: 6.5rem;
+    width: 43.5rem;
+  }
+
+  a.anime::before {
+    height: 6.5rem;
+    width: 44.1rem;
+  }
+
+  a.anime:hover::before {
+    height: 6.6rem;
+    width: 44.6rem;
+  }
+}
