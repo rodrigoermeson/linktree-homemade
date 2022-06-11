@@ -5,7 +5,6 @@
 }
 
 :root {
-  
   --primary-color: hsl(236, 28%, 29%);
   --secondary-color: hsl(231, 20%, 38%);
   --third-color: hsl(226, 28%, 43%);
@@ -48,7 +47,9 @@ header img {
 }
 
 main h1 {
-  color: var(--brand-beige);
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: white;
   font-weight: bold;
   padding-bottom: 1rem;
 
@@ -56,43 +57,66 @@ main h1 {
 }
 
 main p {
-  color: var(--brand-beige);
+  color: white;
   padding-bottom: 5rem;
   text-shadow: 1px 1px var(--headline);
 }
 
 div .content {
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .content a {
-
-  
   display: flex;
   flex-direction: column;
+}
+a.anime {
+  height: 6rem;
+  width: 43rem;
 
-  width: 30rem;
-  height: 4rem;
+  letter-spacing: 1rem;
 
   align-items: center;
   justify-content: center;
 
-  background: var(--brand-dark);
-  color: var(--primary-color);
+  padding: 1.2rem 3.2rem;
+  background: transparent;
+  color: white;
+  border: 0.2rem solid white;
   border-radius: 1.2rem;
   text-decoration: none;
-
-
+  transition: 0.4s;
 }
 
-.content a:hover {
+a.anime:hover {
   font-weight: bold;
-  background: var(--brand-light);
+  color: black;
+  height: 6.5rem;
+  width: 43.5rem;
+  border: 0.2rem solid black;
+}
+
+a.anime::before {
+  content: '';
+  position: absolute;
+  height: 6.5rem;
+  width: 44.1rem;
+  z-index: -1;
+  border-radius: 1.5rem;
+  background-color: hsl(239, 51%, 53%);
+  transform: translate(0.5rem, 0.3rem);
+  transition: 0.4s;
+}
+
+a.anime:hover::before {
+  height: 6.1rem;
+  width: 44.1rem;
+  background-color: hsl(0, 86%, 57%);
+  transform: translate(-0.5rem, -0.3rem);
 }
 
 .bg-topzera {
@@ -102,36 +126,12 @@ div .content {
 
   padding-block: auto;
 
-  height: 95.2%;
+  height: 100%;
 
   margin-inline: auto;
   padding-block: 2.4rem;
 
-  background-image: url("./S-Antônio-Pattern-001.png");
+  background-image: url(./S-Antônio-Pattern-001.png);
   background-size: contain;
   background-position: -30rem 2rem;
-
-}
-
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  bottom: 0;
-  width: 100vw;
-
-  height: 3rem;
-  background: var(--primary-color);
-
-  filter: brightness(0.9);
-}
-
-footer a {
-  color: var(--brand-beige);
-  text-decoration: none;
-}
-
-footer p {
-  color: var(--brand-beige);
 }
